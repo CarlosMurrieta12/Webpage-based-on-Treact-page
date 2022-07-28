@@ -22,6 +22,8 @@ li {
 
 h1 {
     font-size: 3rem;
+    line-height: 1.25;
+    color: rgba(26,32,44);
 }
 
 .purple {
@@ -36,21 +38,45 @@ input {
 
 button {
     position: absolute;
-    text-align: center;
-    max-width: 28rem;
-    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
     width: 10rem;
-    padding: 1rem 0;
+    padding: 0 1rem;
+    margin-right: 0.5rem;
+    line-height: 1;
+    right: 0;
+    top: 0;
+    bottom: 0;
     border-radius: 9999px;
-    margin: 8px 8px 8px 0;
-    background-color: #6415FF;
     font-weight: 700;
-    color: rgba(247,250,252);
+    font-size: 100%;
     border: none;
+    color: rgba(247,250,252);
+    background-color: rgba(100,21,255);
 }
 
 body {
+    line-height: inherit;
+}
+
+.body__spacing {
     padding: 32px;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#landing {
+    height: 100vh;
 }
 
 /* NAV */
@@ -117,18 +143,22 @@ body {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+    height: calc(100vh - 43.98);
 }
 
 .header__description {
-    width: 40%;
+    width: 100%;
     text-align: left;
     max-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header__para {
     font-size: 1.125rem;
     margin: 2rem 0;
-    line-height: 24px;
+    line-height: 27px;
     color: #243E63;
 }
 
@@ -137,6 +167,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: flex-end;
+   max-width: 28rem;
 }
 
 input {
@@ -147,11 +178,21 @@ input {
    padding-left: 2rem;
    font-weight: 500;
    font-size: 100%;
-   border-color: #a0aec09f;
+   height: 67.9688px;
+   border-style: solid;
+   border-color: rgb(229, 231, 235);
+}
+
+::placeholder {
+    opacity: 0.75;
 }
 
 .trusted__costumers {
-    margin: 80px 0 0;
+    margin-top: 5rem;
+    height: 67.5586px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .costumers__img {
@@ -165,10 +206,12 @@ input {
     font-size: 0.75rem;
     font-weight: 700;
     color: #A0AEC0;
+    letter-spacing: 0.05em;
+    margin: 0;
+    transform: translateY(1px);
 }
 
-img {
-    max-width: 48rem;
-    width: 100%;
+.header__img {
+    max-width: 746.48px;
     height: auto;
 }
