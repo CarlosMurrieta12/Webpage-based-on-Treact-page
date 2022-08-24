@@ -6,18 +6,6 @@
     font-family: 'Inter', sans-serif;
 }
 
-.row {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.container {
-    padding: 96px 0;
-    max-width: 1024px;
-    margin: 0 auto;
-}
-
 a {
     text-decoration: none;
 }
@@ -219,72 +207,88 @@ input {
 
 /* FEATURES */
 
-.features__header {
+.features__container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: column wrap;
+    flex-direction: row;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 6rem 0;
     justify-content: center;
+    align-items: center;
 }
 
 .features__subheading {
-    font-size: 16px;
+    margin-bottom: 1rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    margin-bottom: 1rem;
+    font-size: 16px;
 }
 
 .features__heading {
     width: 100%;
     font-size: 3rem;
-    font-weight: 900;
-    letter-spacing: 0.025em;
+    font-weight: 800;
     text-align: center;
-    color: rgba(36,62,99);
-    height: 72.0117px;
+    letter-spacing: 0.025em;
+    color: #243E63;
 }
 
 .features__description {
-    font-size: 1.125rem;
+    width: 100%;
+    text-align: center;
+    max-width: 36rem;
     font-weight: 500;
     line-height: 1.625;
-    max-width: 36rem;
-    width: 100%;
-    margin: 0;
-    margin-top: 16px;
-    text-align: center;
-    color: rgba(124,139,161);
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #7C8BA1;
 }
 
 .vertical__spacer {
-    margin-top: 2.5rem;
     width: 100%;
+    margin-top: 2rem;
 }
 
-.feature__info {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.feature__section {
-    text-align: left;
-    padding: 2rem 0.5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: flex;
+.feature__section--container {
+    max-width: 24rem;
     width: calc(100% / 3);
 }
 
-.feature__img--wrapper .feature__img {
-    border-width: 1px;
-    text-align: center;
-    padding: 1.125rem;
-    flex-shrink: 0;
-    border-radius: 9999px;
+.feature__section {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    height: 100%;
+    margin: 0 1rem;
+    padding: 2rem 0.5rem;
 }
 
 .feature__img {
-    width: 1.5rem;
-    height: 1.5rem;
-    width: 100%;
-    border: #A0AEC0;
+    padding: 1.25rem;
+    border: solid #e5e7eb;
+    border-radius: 9999px;
+    border-width: 1px;
+}
+
+.text__container {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.feature__section--title {
+    letter-spacing: 0.025em;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #243E63;
+}
+
+.feature__section--description {
+    margin-top: 1rem;
+    font-weight: 500;
+    line-height: 2;
+    color: #7C8BA1;
+    margin-bottom: 0;
 }
